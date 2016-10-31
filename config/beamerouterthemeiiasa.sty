@@ -1,0 +1,35 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{iiasa}[1][]
+{
+\vskip1cm%
+    \begin{tikzpicture}[remember picture,overlay] 
+         \node(background) [xshift=0cm,yshift=0cm] at (current page.center)
+         {
+            \includegraphics[width=\paperwidth, height=\paperheight]{./config/iiasa_master_slide_03.jpg}
+         };
+     \node(frametitle) [xshift=13cm,yshift=-1.5cm] at (current page.north west)
+     {
+        \begin{beamercolorbox}[wd=25cm,leftskip=0cm,sep=8pt,#1]{title page header}
+            \usebeamerfont{frametitle}\insertframetitle\par
+            \usebeamerfont{framesubtitle}\insertframesubtitle\par
+        \end{beamercolorbox}
+     };
+    \end{tikzpicture}%
+  %\begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+  %\begin{tikzpicture}
+  %\useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
+  %\fill[orange] (0,0) rectangle(2.95,1.2);
+  %\fill[blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.2);
+  % \ifx\insertframesubtitle\@empty%
+  %    {\node[anchor=west, white,font=\large] at (3.2,0.61){\insertframetitle};}
+  %    \else
+  %    {\node[anchor= west, white,font=\large] at (3.2,0.81){\insertframetitle};
+  %     \node[anchor= west, white,font=\small] at (3.2,0.41){\insertframesubtitle};}
+  %    \fi
+  %\end{tikzpicture}
+  %\end{beamercolorbox}
+}
+
+\mode<all>

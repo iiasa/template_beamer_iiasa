@@ -1,0 +1,34 @@
+\mode<presentation>
+
+% Title page
+\defbeamertemplate*{title page}{iiasa}[1][]
+{ 
+   \begin{tikzpicture}[remember picture,overlay] 
+     \node(background) [xshift=0cm,yshift=0cm] at (current page.center)
+     {
+        \includegraphics[width=\paperwidth, height=\paperheight]{./config/iiasa_master_slide_01.jpg}
+     };
+     \node(title) [xshift=7cm,yshift=-6cm] at (current page.north)
+     {
+        \begin{beamercolorbox}[wd=25cm,leftskip=0cm,sep=8pt,#1]{title page header}
+            \usebeamerfont{title}\inserttitle\par%
+            \usebeamerfont{subtitle}\insertsubtitle\par%
+        \end{beamercolorbox}
+     };
+     \node(author) [xshift=7cm,yshift=-12cm] at (current page.north)
+     {
+        \begin{beamercolorbox}[wd=25cm,leftskip=0cm,#1]{author}
+            \usebeamerfont{author}\insertauthor%
+        \end{beamercolorbox}
+     };
+     \node(date)[xshift=0cm,yshift=0.8cm] at (current page.south east) 
+     {
+        \begin{beamercolorbox}[wd=10cm,leftskip=0cm,#1]{date}
+            \usebeamerfont{date}\insertdate%
+        \end{beamercolorbox}
+     };
+   \end{tikzpicture}
+}
+
+\mode
+<all>
